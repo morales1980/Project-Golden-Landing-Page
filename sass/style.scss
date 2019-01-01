@@ -1,8 +1,13 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+}
 .container {
   width: 100%;
   max-width: 1350px;
   min-width: 315px;
-  margin-left: 0 auto;
+  margin: 0 auto;
 }
 
 [class*="col-"] {
@@ -17,6 +22,51 @@
 .clearfix:after {
   clear: both;
 }
+.background-wrapper:after {
+  padding-top: 51.85%;
+  display: block;
+  content: '';
+}
+.background-wrapper {
+  width: 100%;
+  position: relative;
+  .background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: url('../images/home-background.png') 0/cover no-repeat;
+  }
+}
+nav {
+  .logo {
+    display: block;
+    width: 79px;
+    padding-top: 49px;
+    float: left;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    float: right;
+    li {
+      float: left;
+      padding: 55px 40px 7px 0;
+      &:last-of-type {
+        padding-right: 0;
+      }
+      a {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+      }
+    }
+  }
+}
 
 @media screen and (min-width: 1200px) {
   @for $i from 1 through 12 {
@@ -24,6 +74,9 @@
     .col-xl-#{$i} {
       width: $width;
     }
+  }
+  .container {
+    max-width: 1200px;
   }
 }
 
@@ -34,6 +87,9 @@
       width: $width;
     }
   }
+  .container {
+    max-width: 992px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -43,6 +99,9 @@
       width: $width;
     }
   }
+  .container {
+    max-width: 768px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -51,5 +110,8 @@
     .col-sm-#{$i} {
       width: $width;
     }
+  }
+  .container {
+    max-width: 576px;
   }
 }
