@@ -1,0 +1,35 @@
+@media screen and (min-width: 1200px) {
+  @for $i from 1 through 12 {
+    $width: percentage(1 / 12) * $i;
+    .col-xl-#{$i} {
+      width: $width;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  @for $i from 1 through 12 {
+    $width: percentage(1 / 12) * $i;
+    .col-lg-#{$i} {
+      width: $width;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  @for $i from 1 through 12 {
+    $width: percentage(1 / 12) * $i;
+    .col-md-#{$i} {
+      width: $width;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  @for $i from 1 through 12 {
+    $width: percentage(1 / 12) * $i;
+    .col-sm-#{$i} {
+      width: $width;
+    }
+  }
+}
