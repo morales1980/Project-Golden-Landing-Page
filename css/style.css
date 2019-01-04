@@ -1,14 +1,10 @@
-body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Roboto Slab', serif;
+.row::before, .row::after {
+  content: "";
+  display: table;
 }
 
-.container {
-  width: 100%;
-  max-width: 1350px;
-  min-width: 315px;
-  margin: 0 auto;
+.row:after {
+  clear: both;
 }
 
 [class*="col-"] {
@@ -16,13 +12,20 @@ body {
   min-height: 1px;
 }
 
-.clearfix::before, .clearfix::after {
-  content: "";
-  display: table;
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.clearfix:after {
-  clear: both;
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+section > .container {
+  margin: 120px auto 120px auto;
 }
 
 .background-wrapper:after {
@@ -42,7 +45,12 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  background: url("../images/home-background.png") 0/cover no-repeat;
+  background: url("../images/home-background.png") no-repeat center center;
+  background-size: cover;
+}
+
+nav {
+  padding: 0 32px;
 }
 
 nav .logo {
@@ -69,11 +77,121 @@ nav ul li:last-of-type {
 }
 
 nav ul li a {
-  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
+}
+
+#home {
+  color: #fff;
+  text-align: center;
+}
+
+#home h1 {
+  margin-top: 10%;
+  font-family: 'PT Serif', serif;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: capitalize;
+}
+
+#home h2 {
+  margin-top: 10%;
+  text-transform: uppercase;
+  font: bold 75px/75px 'Montserrat', sans-serif;
+}
+
+#home #tellMeMore {
+  margin-top: 5%;
+  background-color: #fed136;
+  border: none;
+  border-radius: 3px;
+  padding: 25px 51px;
+  font: bold 18px/18px 'Montserrat', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#services {
+  background: #fff;
+}
+
+#services header {
+  text-align: center;
+}
+
+#services header h3 {
+  text-transform: uppercase;
+  color: #222;
+  font: bold 40px/40px 'Montserrat', sans-serif;
+}
+
+#services header p {
+  font: 16px/16px 'PT Serif', serif;
+  padding-top: 20px;
+  color: #777;
+}
+
+#services article {
+  padding-top: 76px;
+  text-align: center;
+}
+
+#services article .services-icon-wrapper {
+  margin: 0 auto;
+  width: 73px;
+  height: 73px;
+  border-radius: 50%;
+  border: 3px solid #fed136;
+  position: relative;
+}
+
+#services article h4 {
+  margin-top: 24px;
+  text-transform: capitalize;
+  font: bold 18px/18px 'Montserrat', sans-serif;
+}
+
+#services article p {
+  padding: 15px 28px 0;
+  font: 14px/14px 'PT Serif', serif;
+  color: #777;
+}
+
+#services article:nth-child(1) .services-icon-wrapper:after {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: 16px;
+  display: block;
+  background: url("../images/icon-basket.png") no-repeat;
+  left: 17px;
+}
+
+#services article:nth-child(2) .services-icon-wrapper:after {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: 16px;
+  display: block;
+  background: url("../images/icon-laptop.png") no-repeat;
+  left: 17px;
+  top: 20px;
+}
+
+#services article:nth-child(3) .services-icon-wrapper:after {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: 16px;
+  display: block;
+  background: url("../images/icon-paddlock.png") no-repeat;
+  left: 22px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -112,9 +230,6 @@ nav ul li a {
   }
   .col-xl-12 {
     width: 100%;
-  }
-  .container {
-    max-width: 1200px;
   }
 }
 
@@ -156,7 +271,21 @@ nav ul li a {
     width: 100%;
   }
   .container {
-    max-width: 992px;
+    max-width: 960px;
+  }
+  #home {
+    color: #fff;
+    text-align: center;
+  }
+  #home h1 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  #home h2 {
+    font: bold 40px/40px 'Montserrat', sans-serif;
+  }
+  #home #tellMeMore {
+    font: bold 12px/12px 'Montserrat', sans-serif;
   }
 }
 
@@ -198,7 +327,7 @@ nav ul li a {
     width: 100%;
   }
   .container {
-    max-width: 768px;
+    max-width: 720px;
   }
 }
 
@@ -240,7 +369,7 @@ nav ul li a {
     width: 100%;
   }
   .container {
-    max-width: 576px;
+    max-width: 540px;
   }
 }
 
