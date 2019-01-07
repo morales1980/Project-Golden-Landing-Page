@@ -167,6 +167,102 @@ nav {
     }
   }
 }
+#portfolio {
+  text-transform: capitalize;
+  text-align: center;
+  background-color: #f7f7f7;
+  padding: 1px 0;
+  .row {
+    &:nth-child(2) {
+      padding-top: 50px;
+      article {
+        &:nth-child(1) {
+          .portfolio-image-wrapper {
+            background: url('../images/portfolio-1.png') no-repeat center center;
+          }
+        }
+        &:nth-child(2) {
+          .portfolio-image-wrapper {
+            background: url('../images/portfolio-2.png') no-repeat center center;
+          }
+        }
+        &:nth-child(3) {
+          .portfolio-image-wrapper {
+            background: url('../images/portfolio-3.png') no-repeat center center;
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      article {
+        &:nth-child(1) {
+          .portfolio-image-wrapper {
+            background: url('../images/portfolio-4.png') no-repeat center center;
+          }
+        }
+        &:nth-child(2) {
+          .portfolio-image-wrapper {
+            background: url('../images/portfolio-5.png') no-repeat center center;
+          }
+        }
+        &:nth-child(3) {
+          .portfolio-image-wrapper {
+            background: url('../images/portfolio-6.png') no-repeat center center;
+          }
+        }
+      }
+    }
+  }
+  header {
+    h3 {
+      text-transform: uppercase;
+      font: bold 40px/40px 'Montserrat', sans-serif;
+      color: #222;
+    }
+    p {
+      padding-top: 20px;
+      font: 16px/16px 'PT Serif', serif;
+      color: #777;
+    }
+  }
+  article {
+    .portfolio-image-wrapper {
+      background-size: cover !important;
+      // width: 290px;
+      // height: 300px;
+      width: 100%;
+      padding-top: 100%;
+    }
+    &:nth-child(1) {
+      .portfolio-article-wrapper {
+        padding: 25px 17px 25px 25px;
+      }
+    }
+    &:nth-child(2) {
+      .portfolio-article-wrapper {
+        padding: 25px 17px 25px 17px;
+      }
+    }
+    &:nth-child(3) {
+      .portfolio-article-wrapper {
+        padding: 25px 25px 25px 17px;
+      }
+    }
+    .portfolio-label {
+      background-color: #fff;
+      padding: 30px 0;
+      h4 {
+        font: bold 18px/18px 'Montserrat', sans-serif;
+        color: #222;
+      }
+      p {
+        padding-top: 2px;
+        font: 14px/14px 'PT Serif', serif;
+        color: #777;
+      }
+    }
+  }
+}
 
 @media screen and (min-width: 1200px) {
   @for $i from 1 through 12 {
