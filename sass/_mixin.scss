@@ -1,0 +1,14 @@
+@mixin services-icon($icon-url) {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: 16px;
+  display: block;
+  background: url($icon-url) no-repeat;
+}
+// @mixin about-image($i, $image-url) {
+//   .about-image-#{$i} {
+//     background: url($image-url) no-repeat;
+//   }
+// }
