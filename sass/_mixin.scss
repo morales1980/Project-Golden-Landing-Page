@@ -1,9 +1,10 @@
 @mixin services-icon($icon-url) {
   content: "";
+  box-sizing: content-box;
   position: absolute;
   height: 40px;
   width: 40px;
-  top: 16px;
+  top: 13px;
   display: block;
   background: url($icon-url) no-repeat;
 }
