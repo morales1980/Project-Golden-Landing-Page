@@ -1,3 +1,5 @@
+@import '_variables';
+
 @mixin services-icon($icon-url) {
   content: "";
   box-sizing: content-box;
@@ -8,8 +10,10 @@
   display: block;
   background: url($icon-url) no-repeat;
 }
-// @mixin about-image($i, $image-url) {
-//   .about-image-#{$i} {
-//     background: url($image-url) no-repeat;
-//   }
-// }
+@mixin font-content($font-weight, $font-size, $line-height) {
+  font: $font-weight $font-size+px str-insert(#{$line-height+px},"/", 1) $font-content;
+}
+
+@mixin font-header($font-weight, $font-size, $line-height) {
+  font: $font-weight $font-size+px str-insert(#{$line-height+px},"/", 1) $font-header;
+}
