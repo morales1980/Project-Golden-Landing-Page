@@ -1,0 +1,82 @@
+@import '_mixin';
+@import '_variables';
+
+section.team {
+  text-transform: capitalize;
+  text-align: center;
+  background-color: $color-background-special;
+  .container {
+    max-width: 840px;
+    .row {
+      header {
+        h3 {
+          text-transform: uppercase;
+          @include font-header(bold, 40, 40);
+          color: $color-header;
+        }
+        p {
+          padding-top: 20px;
+          @include font-content(normal, 16, 16);
+          color: $color-paragraph;
+        }
+      }
+      &:nth-child(2) {
+        article {
+          padding-top: 76px;
+          div.team-image-wrapper {
+            padding: 0 23px;
+            div.team-image {
+              box-sizing: border-box;
+              border: 7px solid $color-primary;
+              border-radius: 50%;
+              // background: url('') no-repeat center center/cover;
+              background-color: #000;
+              width: 100%;
+              padding-bottom: 94%;
+            }
+          }
+          h4 {
+            padding-top: 20px;
+            text-transform: capitalize;
+            @include font-header(bold, 18, 18);
+            color: $color-header;
+          }
+          p {
+            padding-top: 11px;
+            @include font-content(normal, 14, 20);
+            color: $color-paragraph;
+          }
+          div.team-social-panel-wrapper {
+            width: 148px;
+            margin: 0 auto;
+            div.team-social-button-wrapper {
+              padding: 4px;
+            }
+          }
+          &:nth-child(2) {
+            div.team-image-wrapper {
+              div.team-image {
+                // background: url('') no-repeat center center/cover;
+              }
+            }
+          }
+          &:nth-child(3) {
+            div.team-image-wrapper {
+              div.team-image {
+                // background: url('') no-repeat center center/cover;
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(3) {
+        p {
+          text-transform: none;
+          padding: 50px 192px 0;
+          @include font-content(normal, 14, 20);
+          color: $color-paragraph;
+        }
+      }
+    }
+  }
+}

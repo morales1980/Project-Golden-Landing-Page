@@ -1,0 +1,64 @@
+@import '_mixin';
+@import '_variables';
+
+section.services {
+  color: $color-header;
+  text-align: center;
+  header {
+    h3 {
+      text-transform: uppercase;
+      @include font-header(bold, 40, 40);
+    }
+    p {
+      padding-top: 20px;
+      color: $color-paragraph;
+      @include font-content(normal, 16, 16);
+    }
+  }
+  article {
+    padding-top: 76px;
+    .services-icon-wrapper {
+      margin: 0 auto;
+      width: 73px;
+      height: 73px;
+      border-radius: 50%;
+      border: 3px solid $color-special;
+      position: relative;
+    }
+    h4 {
+      margin-top: 24px;
+      text-transform: capitalize;
+      @include font-header(bold, 18, 18);
+    }
+    p {
+      padding: 15px 28px 0;
+      @include font-content(normal, 14, 20);
+      color: $color-paragraph;
+    }
+  }
+  article:nth-child(1) {
+    .services-icon-wrapper{
+      &:after {
+        @include services-icon('../images/icon-basket.png');
+        left: 17px;
+      }
+    }
+  }
+  article:nth-child(2) {
+    .services-icon-wrapper{
+      &:after {
+        @include services-icon('../images/icon-laptop.png');
+        left: 17px;
+        top: 20px;
+      }
+    }
+  }
+  article:nth-child(3) {
+    .services-icon-wrapper{
+      &:after {
+        @include services-icon('../images/icon-paddlock.png');
+        left: 22px;
+      }
+    }
+  }
+}

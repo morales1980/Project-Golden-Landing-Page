@@ -1,0 +1,51 @@
+
+
+section.logos {
+  padding: 60px 0;
+  .container {
+    span {
+      display: block;
+      float: right;
+    }
+    img {
+      box-sizing: border-box;
+      height: 42px;
+      padding: 0 22px;
+      &:hover {
+        animation: wobble 1s cubic-bezier(.36,.07,.19,.97) both;
+      }
+    }
+    .logos-image-1 {
+      padding: 6px 22px;
+      width: 197px;
+      display: inline;
+    }
+    .logos-image-2 {
+      width: 230px;
+      display: inline;
+    }
+    .logos-image-3 {
+      width: 175px;
+    }
+    .logos-image-4 {
+      width: 209px;
+    }
+  }
+}
+@keyframes wobble {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

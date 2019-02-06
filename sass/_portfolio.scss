@@ -1,0 +1,90 @@
+@import '_mixin';
+@import '_variables';
+
+section.portfolio {
+  text-transform: capitalize;
+  text-align: center;
+  background-color: $color-background-special;
+  .row {
+    header {
+      h3 {
+        text-transform: uppercase;
+        @include font-header(bold, 40, 40);
+        color: $color-header;
+      }
+      p {
+        padding-top: 20px;
+        @include font-content(normal, 16, 16);
+        color: $color-paragraph;
+      }
+    }
+    &:nth-child(2) {
+      padding-top: 50px;
+      article {
+        &:nth-child(1) {
+          .portfolio-image-wrapper {
+            background: url('../images/portfolio-1.png') no-repeat center center/cover;
+          }
+        }
+        &:nth-child(2) {
+          .portfolio-image-wrapper {
+            background: url('../images/portfolio-2.png') no-repeat center center/cover;
+          }
+        }
+        &:nth-child(3) {
+          .portfolio-image-wrapper {
+            background: url('../images/portfolio-3.png') no-repeat center center/cover;
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      article {
+        &:nth-child(1) {
+          .portfolio-image-wrapper {
+            background: url('../images/portfolio-4.png') no-repeat center center/cover;
+          }
+        }
+        &:nth-child(2) {
+          .portfolio-image-wrapper {
+            background: url('../images/portfolio-5.png') no-repeat center center/cover;
+          }
+        }
+        &:nth-child(3) {
+          .portfolio-image-wrapper {
+            background: url('../images/portfolio-6.png') no-repeat center center/cover;
+          }
+        }
+      }
+    }
+  }
+  article {
+    .portfolio-article-wrapper {
+      margin: 25px;
+      .portfolio-article-wrapper-content {
+        transition: transform 0.4s, box-shadow 0.4s;
+        &:hover {
+          transform: scale(1.05, 1.05);
+          box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
+        }
+        .portfolio-image-wrapper {
+          width: 100%;
+          padding-top: 100%;
+        }
+        .portfolio-label {
+          background-color: $color-background;
+          padding: 30px 0;
+          h4 {
+            @include font-header(bold, 18, 18);
+            color: $color-header;
+          }
+          p {
+            padding-top: 2px;
+            @include font-content(normal, 14, 14);
+            color: $color-paragraph;
+          }
+        }
+      }
+    }
+  }
+}

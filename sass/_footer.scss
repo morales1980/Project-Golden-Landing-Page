@@ -1,0 +1,24 @@
+@import '_mixin';
+@import '_variables';
+
+footer {
+  .container {
+    .row {
+      .col {
+        p {
+          padding : 35px 0 35px 35px;
+          display: block;
+          @include font-header(normal, 14, 14);
+          color: $color-header;
+        }
+        div.footer-social-panel-wrapper {
+          margin: 20px 0 0 170px;
+          a {
+            display: inline-block;
+            margin: 2px;
+          }
+        }
+      }
+    }
+  }
+}

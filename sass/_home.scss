@@ -1,0 +1,18 @@
+@import '_mixin';
+
+section.home {
+  text-align: center;
+  h1 {
+    margin-top: 160px;
+    text-transform: capitalize;
+    @include font-content(normal, 40, 40);
+  }
+  h2 {
+    margin-top: 50px;
+    text-transform: uppercase;
+    @include font-header(bold, 75, 75);
+  }
+  button.tellMeMore {
+    margin-top: 50px;
+  }
+}
