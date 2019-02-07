@@ -18,7 +18,7 @@ section.about {
       }
     }
     article.col-custom {
-      width: 36.87%;
+      width: 36%;
     }
     article {
       div.about-article-wrapper {
@@ -76,14 +76,20 @@ section.about {
     &:nth-child(even) {
       article {
         text-align: right;
+        float: right;
+      }
+      div.col-custom {
+        float: right;
+        margin-right: 37%;
       }
     }
     &:nth-child(odd) {
       article {
-        float: right;
+        float: left;
       }
       div.col-custom{
-        float: right;
+        float: left;
+        margin-left: 36.5%;
       }
     }
     &:nth-child(1) {
@@ -100,11 +106,13 @@ section.about {
     &:last-of-type {
       div.col-custom {
         width: 100%;
+        margin: 0 auto;
         div.about-image {
           width: 15%;
           padding-bottom: 15%;
           background-color: $color-special;
           position: relative;
+          left: -4px;
           span {
             display: inline-block;
             text-transform: uppercase;

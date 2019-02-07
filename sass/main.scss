@@ -1,15 +1,5 @@
 @import '_mixin';
 @import '_variables';
-@import '_header';
-@import '_home';
-@import '_services';
-@import '_portfolio';
-@import '_about';
-@import '_team';
-@import '_logos';
-@import '_contact';
-@import '_footer';
-@import '_media';
 
 .row::before, .row::after {
   content: "";
@@ -97,35 +87,46 @@ a[class*="social-icon"] {
       color: $color-icon-hover;
     }
   }
+  &.social-icon-twitter:hover {
+    background-color: $color-twitter;
+    border-color: $color-twitter;
+  }
+  &.social-icon-facebook {
+    span {
+      left: 11px;
+    }
+    &:hover {
+      background-color: $color-facebook;
+      border-color: $color-facebook;
+    }
+  }
+  &.social-icon-pinterest {
+    span {
+      left: 9px;
+    }
+    &:hover {
+      background-color: $color-pinterest;
+      border-color: $color-pinterest;
+    }
+  }
+  &.social-icon-googleplus {
+    span {
+      left: 4px;
+    }
+    &:hover {
+      background-color: $color-googleplus;
+      border-color: $color-googleplus;
+    }
+  }
 }
-a.social-icon-twitter:hover {
-  background-color: $color-twitter;
-  border-color: $color-twitter;
-}
-a.social-icon-facebook {
-  span {
-    left: 11px;
-  }
-  &:hover {
-    background-color: $color-facebook;
-    border-color: $color-facebook;
-  }
-}
-a.social-icon-pinterest {
-  span {
-    left: 9px;
-  }
-  &:hover {
-    background-color: $color-pinterest;
-    border-color: $color-pinterest;
-  }
-}
-a.social-icon-googleplus {
-  span {
-    left: 4px;
-  }
-  &:hover {
-    background-color: $color-googleplus;
-    border-color: $color-googleplus;
-  }
-}
+
+@import '_header';
+@import '_home';
+@import '_services';
+@import '_portfolio';
+@import '_about';
+@import '_team';
+@import '_logos';
+@import '_contact';
+@import '_footer';
+@import '_media';
