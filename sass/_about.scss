@@ -6,11 +6,11 @@ section.about {
     padding-top: 93px;
     header {
       text-align: center;
-      h3 {
-        text-transform: uppercase;
-        @include font-header(bold, 40, 40);
-        color: $color-header;
-      }
+      // h3 {
+      //   text-transform: uppercase;
+      //   @include font-header(bold, 40, 40);
+      //   color: $color-header;
+      // }
       p {
         padding-top: 20px;
         @include font-content(normal, 16, 16);
@@ -124,6 +124,184 @@ section.about {
           }
           &::after {
             display: none;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .row {
+      padding-top: 50px;
+      div.col-custom {
+        div.about-image {
+          &::after {
+            padding-bottom: 100%;
+          }
+        }
+      }
+      &:last-of-type {
+        div.col-custom {
+          div.about-image {
+            span {
+              top: 27px;
+              left: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .row {
+      padding-top: 20px;
+      div.col-custom {
+        div.about-image {
+          width: 65%;
+          padding-bottom: 65%;
+          &::after {
+            padding-bottom: 210%;
+          }
+        }
+      }
+      &:last-of-type {
+        div.col-custom {
+          div.about-image {
+            width: 17%;
+            padding-bottom: 17%;
+            span {
+              font-size: 15px;
+              line-height: 11px;
+              top: 20px;
+              left: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767px) {
+    .row {
+      padding-top: 50px;
+      article.col-custom {
+        float: none;
+        width: 100%;
+        div.about-article-wrapper {
+          padding-top: 25px;
+        }
+      }
+      div.col-custom {
+        float: none;
+        width: 100%;
+        div.about-image {
+          width: 30%;
+          padding-bottom: 30%;
+          &:after {
+            display: none;
+          }
+        }
+      }
+      &:nth-child(odd) {
+        article {
+          float: left;
+          text-align: right;
+        }
+      }
+      &:last-of-type {
+        div.col-custom {
+          div.about-image {
+            float: none;
+            width: 30%;
+            padding-bottom: 30%;
+            left: 0;
+            span {
+              top: 36px;
+              left: 28px;
+              font-size: 17px;
+            }
+          }
+        }
+      }
+      &:nth-child(even), &:nth-child(odd) {
+        div.col-custom {
+          margin: 0 auto;
+          float: none;
+        }
+        article {
+          text-align: center;
+        }
+      }
+      &:nth-child(2) {
+        padding-top: 50px;
+      }
+    }
+  }
+  @media (max-width: 575px) {
+    .row {
+      padding-top: 50px;
+      article.col-custom {
+        float: none;
+        width: 100%;
+        div.about-article-wrapper {
+          padding-top: 25px;
+          margin: 0 20px;
+        }
+      }
+      div.col-custom {
+        float: none;
+        width: 100%;
+        div.about-image {
+          width: 30%;
+          padding-bottom: 30%;
+          &:after {
+            display: none;
+          }
+        }
+      }
+      &:nth-child(odd) {
+        article {
+          float: left;
+          text-align: right;
+        }
+      }
+      &:last-of-type {
+        div.col-custom {
+          div.about-image {
+            float: none;
+            width: 30%;
+            padding-bottom: 30%;
+            left: 0;
+            span {
+              top: 36px;
+              left: 28px;
+              font-size: 17px;
+            }
+          }
+        }
+      }
+      &:nth-child(even), &:nth-child(odd) {
+        div.col-custom {
+          margin: 0 auto;
+          float: none;
+        }
+        article {
+          text-align: center;
+        }
+      }
+      &:nth-child(2) {
+        padding-top: 50px;
+      }
+    }
+  }
+  @media (max-width: 465px) {
+    .row {
+      &:last-of-type {
+        div.col-custom {
+          div.about-image {
+            span {
+              top: 20px;
+              left: 18px;
+              font-size: 15px;
+            }
           }
         }
       }

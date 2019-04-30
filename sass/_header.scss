@@ -83,4 +83,41 @@ nav {
       }
     }
   }
+  @media (max-width: 767px) {
+    position: relative;
+    a {
+      position: relative;
+      z-index: 2;
+    }
+    div.mobile-nav {
+      z-index: 2;
+    }
+    ul {
+      transition: all .5s ease;
+      visibility: hidden;
+      opacity: 0;
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      li {
+        box-sizing: border-box;
+        padding: 20px;
+        width: 100%;
+        &:last-of-type {
+          padding-right: 20px;
+        }
+        a {
+          text-align: center;
+          float: none;
+          display: block;
+        }
+      }
+    }
+    div.mobile-nav {
+      display: block;
+    }
+  }
 }

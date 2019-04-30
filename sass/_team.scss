@@ -9,11 +9,6 @@ section.team {
     max-width: 840px;
     .row {
       header {
-        h3 {
-          text-transform: uppercase;
-          @include font-header(bold, 40, 40);
-          color: $color-header;
-        }
         p {
           padding-top: 20px;
           @include font-content(normal, 16, 16);
@@ -75,6 +70,47 @@ section.team {
           padding: 50px 192px 0;
           @include font-content(normal, 14, 20);
           color: $color-paragraph;
+        }
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767px) {
+    .container {
+      max-width: 540px;
+      .row {
+        &:nth-child(2) {
+          article {
+            div.team-image-wrapper {
+              padding: 0 10px;
+            }
+            h4 {
+              width: 100px;
+              margin: 0 auto;
+            }
+          }
+        }
+        &:nth-child(3) {
+          p {
+            padding: 50px 90px 0;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 575px) {
+    .container {
+      .row {
+        &:nth-child(2) {
+          article {
+            padding-top: 40px;
+            margin: 0 auto;
+            float: none;
+          }
+        }
+        &:nth-child(3) {
+          p {
+            padding: 30px 60px 0;
+          }
         }
       }
     }

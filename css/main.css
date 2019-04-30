@@ -31,6 +31,12 @@ section {
   margin: 0 auto;
 }
 
+h3 {
+  text-transform: uppercase;
+  font: bold 40px /40px "Montserrat", sans-serif;
+  color: #222;
+}
+
 button {
   padding: 25px 51px;
   border: none;
@@ -69,6 +75,44 @@ button:hover {
 }
 
 button:focus {
+  outline: none;
+}
+
+input {
+  box-sizing: border-box;
+  display: block;
+  margin: 0 14px 28px 14px;
+  padding: 19px;
+  width: 100%;
+  max-width: 510px;
+  border: none;
+  border-radius: 5px;
+  font: inherit;
+  text-transform: inherit;
+}
+
+input:focus {
+  box-shadow: 0 0 3px 2px #fed136;
+  outline: none;
+}
+
+textarea {
+  box-sizing: border-box;
+  display: block;
+  margin: 0 14px 28px 14px;
+  padding: 19px;
+  width: 100%;
+  max-width: 510px;
+  height: 236px;
+  border: none;
+  border-radius: 5px;
+  font: inherit;
+  text-transform: inherit;
+  resize: none;
+}
+
+textarea:focus {
+  box-shadow: 0 0 3px 2px #fed136;
   outline: none;
 }
 
@@ -128,6 +172,33 @@ a[class*="social-icon"].social-icon-googleplus span {
 a[class*="social-icon"].social-icon-googleplus:hover {
   background-color: #d95232;
   border-color: #d95232;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    max-width: 540px;
+  }
+  section {
+    padding: 60px 0;
+  }
 }
 
 .background {
@@ -229,6 +300,46 @@ nav div.mobile-nav.open span:nth-child(3) {
   left: 16px;
 }
 
+@media (max-width: 767px) {
+  nav {
+    position: relative;
+  }
+  nav a {
+    position: relative;
+    z-index: 2;
+  }
+  nav div.mobile-nav {
+    z-index: 2;
+  }
+  nav ul {
+    transition: all .5s ease;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  nav ul li {
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%;
+  }
+  nav ul li:last-of-type {
+    padding-right: 20px;
+  }
+  nav ul li a {
+    text-align: center;
+    float: none;
+    display: block;
+  }
+  nav div.mobile-nav {
+    display: block;
+  }
+}
+
 section.home {
   text-align: center;
 }
@@ -249,14 +360,64 @@ section.home button.tellMeMore {
   margin-top: 50px;
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  section.home h1 {
+    margin-top: 80px;
+    font-size: 35px;
+    line-height: 35px;
+  }
+  section.home h2 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  section.home h1 {
+    margin-top: 30px;
+  }
+  section.home h1 {
+    margin-top: 80px;
+    font-size: 35px;
+    line-height: 35px;
+  }
+  section.home h2 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  section.home h1 {
+    transition: all .5s ease;
+    margin-top: 0;
+    font-size: 35px;
+    line-height: 35px;
+  }
+  section.home h2 {
+    transition: all .5s ease;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 575px) {
+  section.home h1 {
+    transition: all .5s ease;
+    margin-top: 0;
+    font-size: 35px;
+    line-height: 35px;
+  }
+  section.home h2 {
+    transition: all .5s ease;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
 section.services {
   color: #222;
   text-align: center;
-}
-
-section.services header h3 {
-  text-transform: uppercase;
-  font: bold 40px /40px "Montserrat", sans-serif;
 }
 
 section.services header p {
@@ -327,16 +488,16 @@ section.services article:nth-child(3) .services-icon-wrapper:after {
   left: 22px;
 }
 
+@media (max-width: 575px) {
+  section.services article {
+    padding-top: 40px;
+  }
+}
+
 section.portfolio {
   text-transform: capitalize;
   text-align: center;
   background-color: #f7f7f7;
-}
-
-section.portfolio .row header h3 {
-  text-transform: uppercase;
-  font: bold 40px /40px "Montserrat", sans-serif;
-  color: #222;
 }
 
 section.portfolio .row header p {
@@ -407,18 +568,30 @@ section.portfolio article .portfolio-article-wrapper .portfolio-article-wrapper-
   color: #777;
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  section.portfolio article .portfolio-article-wrapper {
+    margin: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  section.portfolio article .portfolio-article-wrapper {
+    margin: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  section.portfolio article .portfolio-article-wrapper {
+    margin: 35px;
+  }
+}
+
 section.about .row {
   padding-top: 93px;
 }
 
 section.about .row header {
   text-align: center;
-}
-
-section.about .row header h3 {
-  text-transform: uppercase;
-  font: bold 40px /40px "Montserrat", sans-serif;
-  color: #222;
 }
 
 section.about .row header p {
@@ -551,6 +724,149 @@ section.about .row:last-of-type div.col-custom div.about-image::after {
   display: none;
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  section.about .row {
+    padding-top: 50px;
+  }
+  section.about .row div.col-custom div.about-image::after {
+    padding-bottom: 100%;
+  }
+  section.about .row:last-of-type div.col-custom div.about-image span {
+    top: 27px;
+    left: 16px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  section.about .row {
+    padding-top: 20px;
+  }
+  section.about .row div.col-custom div.about-image {
+    width: 65%;
+    padding-bottom: 65%;
+  }
+  section.about .row div.col-custom div.about-image::after {
+    padding-bottom: 210%;
+  }
+  section.about .row:last-of-type div.col-custom div.about-image {
+    width: 17%;
+    padding-bottom: 17%;
+  }
+  section.about .row:last-of-type div.col-custom div.about-image span {
+    font-size: 15px;
+    line-height: 11px;
+    top: 20px;
+    left: 15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  section.about .row {
+    padding-top: 50px;
+  }
+  section.about .row article.col-custom {
+    float: none;
+    width: 100%;
+  }
+  section.about .row article.col-custom div.about-article-wrapper {
+    padding-top: 25px;
+  }
+  section.about .row div.col-custom {
+    float: none;
+    width: 100%;
+  }
+  section.about .row div.col-custom div.about-image {
+    width: 30%;
+    padding-bottom: 30%;
+  }
+  section.about .row div.col-custom div.about-image:after {
+    display: none;
+  }
+  section.about .row:nth-child(odd) article {
+    float: left;
+    text-align: right;
+  }
+  section.about .row:last-of-type div.col-custom div.about-image {
+    float: none;
+    width: 30%;
+    padding-bottom: 30%;
+    left: 0;
+  }
+  section.about .row:last-of-type div.col-custom div.about-image span {
+    top: 36px;
+    left: 28px;
+    font-size: 17px;
+  }
+  section.about .row:nth-child(even) div.col-custom, section.about .row:nth-child(odd) div.col-custom {
+    margin: 0 auto;
+    float: none;
+  }
+  section.about .row:nth-child(even) article, section.about .row:nth-child(odd) article {
+    text-align: center;
+  }
+  section.about .row:nth-child(2) {
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 575px) {
+  section.about .row {
+    padding-top: 50px;
+  }
+  section.about .row article.col-custom {
+    float: none;
+    width: 100%;
+  }
+  section.about .row article.col-custom div.about-article-wrapper {
+    padding-top: 25px;
+    margin: 0 20px;
+  }
+  section.about .row div.col-custom {
+    float: none;
+    width: 100%;
+  }
+  section.about .row div.col-custom div.about-image {
+    width: 30%;
+    padding-bottom: 30%;
+  }
+  section.about .row div.col-custom div.about-image:after {
+    display: none;
+  }
+  section.about .row:nth-child(odd) article {
+    float: left;
+    text-align: right;
+  }
+  section.about .row:last-of-type div.col-custom div.about-image {
+    float: none;
+    width: 30%;
+    padding-bottom: 30%;
+    left: 0;
+  }
+  section.about .row:last-of-type div.col-custom div.about-image span {
+    top: 36px;
+    left: 28px;
+    font-size: 17px;
+  }
+  section.about .row:nth-child(even) div.col-custom, section.about .row:nth-child(odd) div.col-custom {
+    margin: 0 auto;
+    float: none;
+  }
+  section.about .row:nth-child(even) article, section.about .row:nth-child(odd) article {
+    text-align: center;
+  }
+  section.about .row:nth-child(2) {
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 465px) {
+  section.about .row:last-of-type div.col-custom div.about-image span {
+    top: 20px;
+    left: 18px;
+    font-size: 15px;
+  }
+}
+
 section.team {
   text-transform: capitalize;
   text-align: center;
@@ -559,12 +875,6 @@ section.team {
 
 section.team .container {
   max-width: 840px;
-}
-
-section.team .container .row header h3 {
-  text-transform: uppercase;
-  font: bold 40px /40px "Montserrat", sans-serif;
-  color: #222;
 }
 
 section.team .container .row header p {
@@ -619,6 +929,33 @@ section.team .container .row:nth-child(3) p {
   color: #777;
 }
 
+@media (min-width: 576px) and (max-width: 767px) {
+  section.team .container {
+    max-width: 540px;
+  }
+  section.team .container .row:nth-child(2) article div.team-image-wrapper {
+    padding: 0 10px;
+  }
+  section.team .container .row:nth-child(2) article h4 {
+    width: 100px;
+    margin: 0 auto;
+  }
+  section.team .container .row:nth-child(3) p {
+    padding: 50px 90px 0;
+  }
+}
+
+@media (max-width: 575px) {
+  section.team .container .row:nth-child(2) article {
+    padding-top: 40px;
+    margin: 0 auto;
+    float: none;
+  }
+  section.team .container .row:nth-child(3) p {
+    padding: 30px 60px 0;
+  }
+}
+
 section.logos {
   padding: 60px 0;
 }
@@ -657,6 +994,72 @@ section.logos .container .logos-image-4 {
   width: 209px;
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  section.logos .container span img {
+    float: right;
+  }
+  section.logos .container span img:first-of-type {
+    margin: 0 -9px 30px 0;
+  }
+  section.logos .container div[class*="col-"] {
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+  section.logos .container div[class*="col-"] img:nth-child(1) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  section.logos .container span img {
+    float: right;
+  }
+  section.logos .container span img:first-of-type {
+    margin: 0 -9px 30px 0;
+  }
+  section.logos .container div[class*="col-"]:last-of-type img {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  section.logos .container span img {
+    float: right;
+  }
+  section.logos .container span img:first-of-type {
+    margin: 0 22px 30px 0;
+  }
+  section.logos .container div[class*="col-"]:last-of-type img:first-of-type {
+    margin-left: 22px;
+  }
+}
+
+@media (max-width: 465px) {
+  section.logos .container span {
+    float: none;
+  }
+  section.logos .container span img.logos-image-1 {
+    float: none;
+    display: block;
+    margin: 0 auto 30px auto;
+  }
+  section.logos .container span img.logos-image-2 {
+    float: none;
+    display: block;
+    margin: 15px auto;
+  }
+  section.logos .container div[class*="col-"]:last-of-type img.logos-image-3 {
+    float: none;
+    display: block;
+    margin: 15px auto;
+  }
+  section.logos .container div[class*="col-"]:last-of-type img.logos-image-4 {
+    float: none;
+    display: block;
+    margin: 30px auto 0 auto;
+  }
+}
+
 @keyframes wobble {
   10%, 90% {
     transform: translate3d(-1px, 0, 0);
@@ -682,8 +1085,6 @@ section.contact .container .row header {
 }
 
 section.contact .container .row header h3 {
-  text-transform: uppercase;
-  font: bold 40px /40px "Montserrat", sans-serif;
   color: #fff;
 }
 
@@ -708,47 +1109,57 @@ section.contact .container .row:nth-child(2) form fieldset {
   width: 100%;
 }
 
-section.contact .container .row:nth-child(2) form fieldset input {
-  box-sizing: border-box;
-  display: block;
-  margin: 0 14px 28px 14px;
-  padding: 19px;
-  width: 100%;
-  max-width: 510px;
-  border: none;
-  border-radius: 5px;
-  font: inherit;
-  text-transform: inherit;
-}
-
-section.contact .container .row:nth-child(2) form fieldset input:focus {
-  box-shadow: 0 0 3px 2px #fed136;
-  outline: none;
-}
-
-section.contact .container .row:nth-child(2) form fieldset textarea {
-  box-sizing: border-box;
-  display: block;
-  margin: 0 14px 28px 14px;
-  padding: 19px;
-  width: 100%;
-  max-width: 510px;
-  height: 236px;
-  border: none;
-  border-radius: 5px;
-  font: inherit;
-  text-transform: inherit;
-  resize: none;
-}
-
-section.contact .container .row:nth-child(2) form fieldset textarea:focus {
-  box-shadow: 0 0 3px 2px #fed136;
-  outline: none;
-}
-
 section.contact .container .row:nth-child(2) form button {
   margin: 0 auto;
   display: block;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  section.contact .container .row:nth-child(2) form fieldset input, section.contact .container .row:nth-child(2) form fieldset textarea {
+    max-width: 452px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  section.contact .container .row:nth-child(2) form fieldset input, section.contact .container .row:nth-child(2) form fieldset textarea {
+    max-width: 350px;
+    font-size: 15px;
+    margin: 0 10px 20px 10px;
+  }
+  section.contact .container .row:nth-child(2) form fieldset input {
+    margin-left: 0;
+  }
+  section.contact .container .row:nth-child(2) form fieldset textarea {
+    margin-right: 0;
+    height: 208px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  section.contact {
+    background-position: 80% 50%;
+  }
+  section.contact .container .row:nth-child(2) form fieldset input {
+    font-size: 15px;
+  }
+  section.contact .container .row:nth-child(2) form fieldset textarea {
+    margin-top: 0;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  section.contact {
+    background-position: 80% 50%;
+  }
+  section.contact .container .row:nth-child(2) form fieldset input, section.contact .container .row:nth-child(2) form fieldset textarea {
+    width: calc(100% - 28px);
+    font-size: 13px;
+    padding: 10px;
+  }
+  section.contact .container .row:nth-child(2) form fieldset textarea {
+    margin-top: 0;
+  }
 }
 
 footer .container .row .col p {
@@ -765,6 +1176,32 @@ footer .container .row .col div.footer-social-panel-wrapper {
 footer .container .row .col div.footer-social-panel-wrapper a {
   display: inline-block;
   margin: 2px;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  footer .container .row div.col {
+    float: none;
+    margin: 20px auto;
+  }
+  footer .container .row div.col p {
+    padding: 20px 0 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 575px) {
+  footer .container .row div.col {
+    float: none;
+    margin: 20px 0;
+  }
+  footer .container .row div.col p {
+    padding: 20px 0 0;
+    text-align: center;
+  }
+  footer .container .row div.col div.footer-social-panel-wrapper {
+    width: 200px;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -915,34 +1352,6 @@ footer .container .row .col div.footer-social-panel-wrapper a {
   .offset-lg-12 {
     margin-left: 100%;
   }
-  section.container, div.container {
-    max-width: 960px;
-  }
-  section.home h1 {
-    margin-top: 80px;
-    font-size: 35px;
-    line-height: 35px;
-  }
-  section.home h2 {
-    font-size: 60px;
-    line-height: 60px;
-  }
-  section.portfolio article .portfolio-article-wrapper {
-    margin: 20px;
-  }
-  section.about .row {
-    padding-top: 50px;
-  }
-  section.about .row div.col-custom div.about-image::after {
-    padding-bottom: 100%;
-  }
-  section.about .row:last-of-type div.col-custom div.about-image span {
-    top: 27px;
-    left: 16px;
-  }
-  section.contact .container .row:nth-child(2) form fieldset input, section.contact .container .row:nth-child(2) form fieldset textarea {
-    max-width: 452px;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1017,69 +1426,6 @@ footer .container .row .col div.footer-social-panel-wrapper a {
   }
   .offset-md-12 {
     margin-left: 100%;
-  }
-  section.container, div.container {
-    max-width: 720px;
-  }
-  section.home h1 {
-    margin-top: 30px;
-  }
-  section.home h1 {
-    margin-top: 80px;
-    font-size: 35px;
-    line-height: 35px;
-  }
-  section.home h2 {
-    font-size: 60px;
-    line-height: 60px;
-  }
-  section.portfolio article .portfolio-article-wrapper {
-    margin: 15px;
-  }
-  section.about .row {
-    padding-top: 20px;
-  }
-  section.about .row div.col-custom div.about-image {
-    width: 65%;
-    padding-bottom: 65%;
-  }
-  section.about .row div.col-custom div.about-image::after {
-    padding-bottom: 210%;
-  }
-  section.about .row:last-of-type div.col-custom div.about-image {
-    width: 17%;
-    padding-bottom: 17%;
-  }
-  section.about .row:last-of-type div.col-custom div.about-image span {
-    font-size: 15px;
-    line-height: 11px;
-    top: 20px;
-    left: 15px;
-  }
-  section.logos .container span img {
-    float: right;
-  }
-  section.logos .container span img:first-of-type {
-    margin: 0 -9px 30px 0;
-  }
-  section.logos .container div[class*="col-"] {
-    box-sizing: border-box;
-    padding: 0 10px;
-  }
-  section.logos .container div[class*="col-"] img:nth-child(1) {
-    margin-bottom: 30px;
-  }
-  section.contact .container .row:nth-child(2) form fieldset input, section.contact .container .row:nth-child(2) form fieldset textarea {
-    max-width: 350px;
-    font-size: 15px;
-    margin: 0 10px 20px 10px;
-  }
-  section.contact .container .row:nth-child(2) form fieldset input {
-    margin-left: 0;
-  }
-  section.contact .container .row:nth-child(2) form fieldset textarea {
-    margin-right: 0;
-    height: 208px;
   }
 }
 
@@ -1156,143 +1502,6 @@ footer .container .row .col div.footer-social-panel-wrapper a {
   .offset-sm-12 {
     margin-left: 100%;
   }
-  section.container, div.container {
-    max-width: 540px;
-  }
-  nav {
-    position: relative;
-  }
-  nav a {
-    position: relative;
-    z-index: 2;
-  }
-  nav div.mobile-nav {
-    z-index: 2;
-  }
-  nav ul {
-    transition: all .5s ease;
-    visibility: hidden;
-    opacity: 0;
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-  nav ul li {
-    box-sizing: border-box;
-    padding: 20px;
-    width: 100%;
-  }
-  nav ul li:last-of-type {
-    padding-right: 20px;
-  }
-  nav ul li a {
-    text-align: center;
-    float: none;
-    display: block;
-  }
-  nav div.mobile-nav {
-    display: block;
-  }
-  section.home h1 {
-    transition: all .5s ease;
-    margin-top: 0;
-    font-size: 35px;
-    line-height: 35px;
-  }
-  section.home h2 {
-    transition: all .5s ease;
-    font-size: 60px;
-    line-height: 60px;
-  }
-  section.about .row {
-    padding-top: 50px;
-  }
-  section.about .row article.col-custom {
-    float: none;
-    width: 100%;
-  }
-  section.about .row article.col-custom div.about-article-wrapper {
-    padding-top: 25px;
-  }
-  section.about .row div.col-custom {
-    float: none;
-    width: 100%;
-  }
-  section.about .row div.col-custom div.about-image {
-    width: 30%;
-    padding-bottom: 30%;
-  }
-  section.about .row div.col-custom div.about-image:after {
-    display: none;
-  }
-  section.about .row:nth-child(odd) article {
-    float: left;
-    text-align: right;
-  }
-  section.about .row:last-of-type div.col-custom div.about-image {
-    float: none;
-    width: 30%;
-    padding-bottom: 30%;
-    left: 0;
-  }
-  section.about .row:last-of-type div.col-custom div.about-image span {
-    top: 36px;
-    left: 28px;
-    font-size: 17px;
-  }
-  section.about .row:nth-child(even) div.col-custom, section.about .row:nth-child(odd) div.col-custom {
-    margin: 0 auto;
-    float: none;
-  }
-  section.about .row:nth-child(even) article, section.about .row:nth-child(odd) article {
-    text-align: center;
-  }
-  section.about .row:nth-child(2) {
-    padding-top: 50px;
-  }
-  section.team .container {
-    max-width: 540px;
-  }
-  section.team .container .row:nth-child(2) article div.team-image-wrapper {
-    padding: 0 10px;
-  }
-  section.team .container .row:nth-child(2) article h4 {
-    width: 100px;
-    margin: 0 auto;
-  }
-  section.team .container .row:nth-child(3) p {
-    padding: 50px 90px 0;
-  }
-  section.logos .container span img {
-    float: right;
-  }
-  section.logos .container span img:first-of-type {
-    margin: 0 -9px 30px 0;
-  }
-  section.logos .container div[class*="col-"]:last-of-type img {
-    margin-bottom: 30px;
-  }
-  section.contact {
-    background-position: 80% 50%;
-  }
-  section.contact .container .row:nth-child(2) form fieldset input {
-    font-size: 15px;
-  }
-  section.contact .container .row:nth-child(2) form fieldset textarea {
-    margin-top: 0;
-    font-size: 15px;
-  }
-  footer .container .row div.col {
-    float: none;
-    margin: 20px auto;
-  }
-  footer .container .row div.col p {
-    padding: 20px 0 0;
-    text-align: center;
-  }
 }
 
 @media (max-width: 575px) {
@@ -1368,182 +1577,6 @@ footer .container .row .col div.footer-social-panel-wrapper a {
   .offset-xs-12 {
     margin-left: 100%;
   }
-  section.container, div.container {
-    max-width: 540px;
-  }
-  section {
-    padding: 60px 0;
-  }
-  nav {
-    position: relative;
-  }
-  nav a {
-    position: relative;
-    z-index: 2;
-  }
-  nav div.mobile-nav {
-    z-index: 2;
-  }
-  nav ul {
-    transition: all .5s ease;
-    visibility: hidden;
-    opacity: 0;
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-  nav ul li {
-    box-sizing: border-box;
-    padding: 20px;
-    width: 100%;
-  }
-  nav ul li:last-of-type {
-    padding-right: 20px;
-  }
-  nav ul li a {
-    text-align: center;
-    float: none;
-    display: block;
-  }
-  nav div.mobile-nav {
-    display: block;
-  }
-  section.home h1 {
-    transition: all .5s ease;
-    margin-top: 0;
-    font-size: 35px;
-    line-height: 35px;
-  }
-  section.home h2 {
-    transition: all .5s ease;
-    font-size: 60px;
-    line-height: 60px;
-  }
-  section.services article {
-    padding-top: 40px;
-  }
-  section.portfolio article .portfolio-article-wrapper {
-    margin: 35px;
-  }
-  section.about .row {
-    padding-top: 50px;
-  }
-  section.about .row article.col-custom {
-    float: none;
-    width: 100%;
-  }
-  section.about .row article.col-custom div.about-article-wrapper {
-    padding-top: 25px;
-    margin: 0 20px;
-  }
-  section.about .row div.col-custom {
-    float: none;
-    width: 100%;
-  }
-  section.about .row div.col-custom div.about-image {
-    width: 30%;
-    padding-bottom: 30%;
-  }
-  section.about .row div.col-custom div.about-image:after {
-    display: none;
-  }
-  section.about .row:nth-child(odd) article {
-    float: left;
-    text-align: right;
-  }
-  section.about .row:last-of-type div.col-custom div.about-image {
-    float: none;
-    width: 30%;
-    padding-bottom: 30%;
-    left: 0;
-  }
-  section.about .row:last-of-type div.col-custom div.about-image span {
-    top: 36px;
-    left: 28px;
-    font-size: 17px;
-  }
-  section.about .row:nth-child(even) div.col-custom, section.about .row:nth-child(odd) div.col-custom {
-    margin: 0 auto;
-    float: none;
-  }
-  section.about .row:nth-child(even) article, section.about .row:nth-child(odd) article {
-    text-align: center;
-  }
-  section.about .row:nth-child(2) {
-    padding-top: 50px;
-  }
-  section.team .container .row:nth-child(2) article {
-    padding-top: 40px;
-    margin: 0 auto;
-    float: none;
-  }
-  section.team .container .row:nth-child(3) p {
-    padding: 30px 60px 0;
-  }
-  section.logos .container span img {
-    float: right;
-  }
-  section.logos .container span img:first-of-type {
-    margin: 0 22px 30px 0;
-  }
-  section.logos .container div[class*="col-"]:last-of-type img:first-of-type {
-    margin-left: 22px;
-  }
-  section.contact {
-    background-position: 80% 50%;
-  }
-  section.contact .container .row:nth-child(2) form fieldset input, section.contact .container .row:nth-child(2) form fieldset textarea {
-    width: calc(100% - 28px);
-    font-size: 13px;
-    padding: 10px;
-  }
-  section.contact .container .row:nth-child(2) form fieldset textarea {
-    margin-top: 0;
-  }
-  footer .container .row div.col {
-    float: none;
-    margin: 20px 0;
-  }
-  footer .container .row div.col p {
-    padding: 20px 0 0;
-    text-align: center;
-  }
-  footer .container .row div.col div.footer-social-panel-wrapper {
-    width: 200px;
-    margin: 0 auto;
-  }
 }
 
-@media (max-width: 465px) {
-  section.about .row:last-of-type div.col-custom div.about-image span {
-    top: 20px;
-    left: 18px;
-    font-size: 15px;
-  }
-  section.logos .container span {
-    float: none;
-  }
-  section.logos .container span img.logos-image-1 {
-    float: none;
-    display: block;
-    margin: 0 auto 30px auto;
-  }
-  section.logos .container span img.logos-image-2 {
-    float: none;
-    display: block;
-    margin: 15px auto;
-  }
-  section.logos .container div[class*="col-"]:last-of-type img.logos-image-3 {
-    float: none;
-    display: block;
-    margin: 15px auto;
-  }
-  section.logos .container div[class*="col-"]:last-of-type img.logos-image-4 {
-    float: none;
-    display: block;
-    margin: 30px auto 0 auto;
-  }
-}
+/*# sourceMappingURL=main.css.map */

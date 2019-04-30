@@ -21,4 +21,36 @@ footer {
       }
     }
   }
+  @media (min-width: 576px) and (max-width: 767px) {
+    .container {
+      .row {
+        div.col {
+          float: none;
+          margin: 20px auto;
+          p {
+            padding: 20px 0 0;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 575px) {
+    .container {
+      .row {
+        div.col {
+          float: none;
+          margin: 20px 0;
+          p {
+            padding: 20px 0 0;
+            text-align: center;
+          }
+          div.footer-social-panel-wrapper {
+            width: 200px;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
 }

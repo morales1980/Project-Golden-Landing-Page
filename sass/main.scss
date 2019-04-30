@@ -28,6 +28,11 @@ section {
   max-width: 1140px;
   margin: 0 auto;
 }
+h3 {
+  text-transform: uppercase;
+  @include font-header(bold, 40, 40);
+  color: $color-header;
+}
 button {
   padding: 25px 51px;
   border: none;
@@ -61,6 +66,40 @@ button {
     transform: scale(1.05, 1.05);
   }
   &:focus {
+    outline: none;
+  }
+}
+input {
+  box-sizing: border-box;
+  display: block;
+  margin: 0 14px 28px 14px;
+  padding: 19px;
+  width: 100%;
+  max-width: 510px;
+  border: none;
+  border-radius: 5px;
+  font: inherit;
+  text-transform: inherit;
+  &:focus {
+    box-shadow: 0 0 3px 2px $color-special;
+    outline: none;
+  }
+}
+textarea {
+  box-sizing: border-box;
+  display: block;
+  margin: 0 14px 28px 14px;
+  padding: 19px;
+  width: 100%;
+  max-width: 510px;
+  height: 236px;
+  border: none;
+  border-radius: 5px;
+  font: inherit;
+  text-transform: inherit;
+  resize: none;
+  &:focus {
+    box-shadow: 0 0 3px 2px $color-special;
     outline: none;
   }
 }
@@ -117,6 +156,30 @@ a[class*="social-icon"] {
       background-color: $color-googleplus;
       border-color: $color-googleplus;
     }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (max-width: 575px) {
+  .container {
+    max-width: 540px;
+  }
+  section {
+    padding: 60px 0;
   }
 }
 

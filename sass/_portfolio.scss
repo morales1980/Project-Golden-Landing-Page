@@ -6,12 +6,7 @@ section.portfolio {
   text-align: center;
   background-color: $color-background-special;
   .row {
-    header {
-      h3 {
-        text-transform: uppercase;
-        @include font-header(bold, 40, 40);
-        color: $color-header;
-      }
+    header {      
       p {
         padding-top: 20px;
         @include font-content(normal, 16, 16);
@@ -84,6 +79,27 @@ section.portfolio {
             color: $color-paragraph;
           }
         }
+      }
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    article {
+      .portfolio-article-wrapper {
+        margin: 20px;
+      }
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    article {
+      .portfolio-article-wrapper {
+        margin: 15px;
+      }
+    }
+  }
+  @media (max-width: 575px) {
+    article {
+      .portfolio-article-wrapper {
+        margin: 35px;
       }
     }
   }
